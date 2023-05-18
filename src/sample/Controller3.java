@@ -70,6 +70,8 @@ public class Controller3 {
 
         if (b.equals(search)) {
 
+            tableRegisterData.clear();
+
             ArrayList<String> students = searchStudents();
 
             students.remove(0);
@@ -87,6 +89,7 @@ public class Controller3 {
                 double exameDouble = Double.parseDouble(students.get(x + 4));
 
                 Student s = new Student(name, n1Double, n2Double, n3Double, exameDouble, name, name);
+
 
                 tableRegisterData.add(new TableRegister(s.getName(), Double.toString(s.getN1()), Double.toString(s.getN2()), Double.toString(s.getN3()), Double.toString(s.getExame()), Double.toString(s.getFinalGrade())));
 
